@@ -1,0 +1,60 @@
+# Python
+*.py[cod]
+*.pyo
+*.pyd
+__pycache__/
+*.env
+*.env.*
+
+# Virtual Environment
+.venv/
+env/
+venv/
+virtualenv/
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+
+# Coverage Reports
+htmlcov/
+.coverage
+.coverage.*
+
+# Django
+db.sqlite3
+media/
+staticfiles/
+static/
+*.pot
+*.pyc
+
+# Testing
+.coverage
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.tox/
+.pytest_cache/
+
+# Node (if using frontend)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Deployment
+*.pid
+Procfile
