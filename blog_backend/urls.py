@@ -30,11 +30,10 @@ schema_view = get_schema_view(
         description="A sample API",
         terms_of_service="https://www.google/com/policies/term/",
         contact=openapi.Contact(email="hello@example.com"),
-        license=openapi.License(name="BSD Licence")
+        license=openapi.License(name="BSD Licence"),
     ),
     permission_classes=(permissions.AllowAny,),
     public=True,
-    
 )
 
 urlpatterns = [
@@ -43,10 +42,17 @@ urlpatterns = [
     path("api-auth/", include("rest_framework.urls")),
     path("api/dj-rest-auth/", include("dj_rest_auth.urls")),
     path("api/dj-rest-auth/registration/", include("dj_rest_auth.registration.urls")),
-    path("swagger/", schema_view.with_ui(
-        "swagger", cache_timeout=0
-    ), name="schema-swagger-ui"),
-    path("redoc/", schema_view.with_ui(
-        "redoc", cache_timeout=0,
-    ), name="schema-redoc"),
+    path(
+        "swagger/",
+        schema_view.with_ui("swagger", cache_timeout=0),
+        name="schema-swagger-ui",
+    ),
+    path(
+        "redoc/",
+        schema_view.with_ui(
+            "redoc",
+            cache_timeout=0,
+        ),
+        name="schema-redoc",
+    ),
 ]
